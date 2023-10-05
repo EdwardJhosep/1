@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISAAC NEWTON</title>
+    <link rel="icon" href="img/logo.jpg.png" type="image/png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<style>
+    /* Estilo para el cuadro de texto */
+    .director-welcome {
+        background-color: #007BFF; /* Color de fondo */
+        color: black; /* Color del texto (cambiado a negro) */
+        padding: 20px; /* Espaciado interno */
+        border-radius: 10px; /* Bordes redondeados */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Sombra */
+    }
+
+    /* Efecto de escala en hover */
+    .director-image:hover {
+        transform: scale(1.1); /* Aumenta el tamaño en un 10% */
+    }
+   /* Estilos para la sección de Docentes y Aulas */
+.teacher-classroom-section {
+    background-color: #f4f4f4; /* Color de fondo de la sección */
+    padding: 40px 0;
+}
+
+/* Estilos para el título de la sección */
+.section-title {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333; /* Color del título */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative; /* Posición relativa para el pseudo-elemento */
+}
+
+/* Efecto de línea debajo del título */
+.section-title::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 2px;
+    background-color: #007BFF; /* Color de la línea */
+}
+
+/* Estilos adicionales para el cuadro de Docentes */
+.teacher-box {
+    background-color: #ff9800;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.teacher-box:hover {
+    transform: scale(1.05);
+    background-color: #ff5722;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilos adicionales para el cuadro de Aulas */
+.classroom-box {
+    background-color: #2196F3;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.classroom-box:hover {
+    transform: scale(1.05);
+    background-color: #1976D2;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+
+</style>
+
+
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+
+
+        <div class="container">
+<!-- Logo de la institución -->
+<a class="navbar-brand" href="#">
+    <img src="img/logo.jpg.png" alt="Logo de la Institución" class="logo">
+</a>
+<!-- Textos en movimiento después del logo -->
+<a class="nav-link moving-text" href="#" id="noticiasDropdown">
+    <img src="img/texto.PNG" alt="">
+    <span id="changingText">Novedades: Matricúlate ahora</span>
+</a>
+<script>
+    const changingText = document.getElementById("changingText");
+    const texts = ["Novedades: ✨✨🎼𝗥𝗘𝗖𝗜𝗧𝗔𝗟 𝗗𝗘 𝗠Ú𝗦𝗜𝗖𝗔 / Lunes  02 de octubre", "Novedades: Inicia el año 2024 con los mejores", "Novedades: Que esperas¡Matriculate ahora!"];
+    let index = 0;
+
+    function changeText() {
+        changingText.textContent = texts[index];
+        index = (index + 1) % texts.length;
+    }
+
+    setInterval(changeText, 5000); // Cambia el texto cada 2 segundos
+</script>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Nosotros
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="mision.html">Mision-Vision</a>
+                            <a class="dropdown-item" href="bienvenida.html">Bienvenida del director</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Niveles de Educación
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="inicial.html">Inicial</a>
+                            <a class="dropdown-item" href="primaria.html">Primaria</a>
+                            <a class="dropdown-item" href="secundaria.html">Secundaria</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="noticiasDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Noticias
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="noticiasDropdown">
+                            <a class="dropdown-item" href="logros.html">Logros</a>
+                            <a class="dropdown-item" href="actividades.html">Actividades</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="noticiasDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Comunidad
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="noticiasDropdown">
+                            <a class="dropdown-item" href="directivos.html">Consejo de directivos</a>
+                            <a class="dropdown-item" href="docentes.html">Plana de docentes</a>
+                            <a class="dropdown-item" href="administrativo.html">Equipo administrativo</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="noticiasDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Admision
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="noticiasDropdown">
+                            <a class="dropdown-item" href="admision2024.html">Admision 2024</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- Iconos en el lado derecho -->
+        <div class="navbar-icons ml-auto">
+            <a class="navbar-icon" href="https://www.facebook.com/I.E.P.ISAAC.NEWTON?mibextid=ZbWKwL">
+                <i class="fab fa-facebook fa-2x"></i>
+            </a>
+            <a class="navbar-icon" href="https://wa.me/51905468247" target="_blank">
+                <i class="fab fa-whatsapp fa-2x"></i>
+            </a>
+            <a class="navbar-icon" href="https://www.youtube.com/@institucioneducativaisaacn7723">
+                <i class="fab fa-youtube fa-2x"></i>
+            </a>
+        </div>
+    </nav>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <main class="container mt-4">
+        <main class="container bg-light p-4 text-center director-welcome">
+            <h2 class="titulo3">Nivel de Secundaria</h2>
+            <p>Bienvenidos al Nivel de Secundaria de la Institución Educativa Escuela Isaac Newton. En esta etapa, nos enfocamos en proporcionar a nuestros estudiantes una educación sólida que los preparará para afrontar los desafíos académicos y personales de la adolescencia.</p>
+    
+            <p>Nuestro compromiso es brindar un ambiente de aprendizaje estimulante y de apoyo, donde cada estudiante tenga la oportunidad de desarrollar sus habilidades y alcanzar su máximo potencial.</p>
+    
+            <h3 class="titulo32">Lo que ofrecemos en el Nivel de Secundaria:</h3>
+            <ul>
+                <li>Un programa académico riguroso y adaptado a las necesidades de los estudiantes de secundaria.</li>
+                <li>Un equipo de docentes especializados y comprometidos en la formación de los jóvenes.</li>
+                <li>Actividades extracurriculares para enriquecer su experiencia educativa y desarrollo personal.</li>
+                <li>Un ambiente de respeto y apoyo que fomenta la responsabilidad y el crecimiento de nuestros estudiantes.</li>
+            </ul>
+    
+            <p>Estamos comprometidos en preparar a nuestros estudiantes de secundaria para un futuro exitoso. Siempre estamos aquí para apoyarlos en su camino hacia la educación superior y el éxito en la vida.</p>
+        </main>
+    </main>
+    <br>
+    <br>
+    <!-- Sección de Docentes y Aulas -->
+    <div class="teacher-classroom-section">
+        <div class="container mt-4 text-center">
+            <h2 class="titulo33">Conoce a Nuestros Docentes y Aulas</h2>
+            <div class="row">
+                <!-- Cuadro de Docentes -->
+                <div class="col-md-6">
+                    <div class="teacher-box">
+                        <img src="img/niveles/secundaria1.JPG" alt="Docentes" class="img-fluid">
+                        <div class="box-content">
+                            <h3>Nuestros Docentes</h3>
+                            <p>En la Institución Educativa Escuela Isaac Newton, contamos con un equipo de docentes altamente calificados y dedicados a la enseñanza secundaria.</p>
+                            <p>Creemos que nuestros docentes son los mejores en su campo y están comprometidos en brindar una educación de calidad.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Cuadro de Aulas -->
+                <div class="col-md-6">
+                    <div class="classroom-box">
+                        <img src="img/niveles/secundaria2.JPG" alt="Aulas" class="img-fluid">
+                        <div class="box-content">
+                            <h3>Nuestras Aulas</h3>
+                            <p>Nuestras aulas para secundaria están diseñadas para ofrecer un entorno de aprendizaje moderno y tecnológicamente avanzado.</p>
+                            <p>Estamos comprometidos en proporcionar a nuestros estudiantes las mejores instalaciones para su preparación académica.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <BR>
+          
+    <!-- Información adicional antes del pie de página -->
+    <div class="blue-rectangle">
+        <div class="container mt-4">
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>Contacto</h3>
+                    <p>
+                        Teléfono: 905468247<br>
+                        Email: iep.isaacnewtonhuanuco@gmail.com<br>
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <h3>Dirección</h3>
+                    <p>
+                        Jirón 2 de Mayo 1450, Huánuco 1000<br>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</main>
+<footer class="bg-dark text-white text-center py-3">
+    <p class="text-light">&copy; 2023  EDWARD JR- Todos los derechos reservados. </p>
+</footer>
+    
+</body>
+</html>

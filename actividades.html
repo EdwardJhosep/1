@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Institución Educativa ISAAC NEWTON</title>
+    <link rel="icon" href="img/logo.jpg.png" type="image/png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="estilo.css">
+    <style>
+        /* Agrega este código CSS a tu archivo estilo.css o dentro de la etiqueta <style> en el encabezado HTML */
+
+/* Estilo para las tarjetas de publicación */
+.card {
+    height: 100%; /* Asegura que todas las tarjetas tengan la misma altura */
+    display: flex; /* Activa la alineación flexible */
+    flex-direction: column; /* Apila elementos verticalmente */
+}
+
+/* Estilo para la imagen de la tarjeta */
+.card-img-top {
+    flex-grow: 1; /* Hace que la imagen ocupe el espacio vertical disponible */
+    object-fit: cover; /* Ajusta la imagen para llenar la tarjeta sin distorsión */
+}
+
+/* Estilo para el cuerpo de la tarjeta */
+.card-body {
+    flex-grow: 0; /* El cuerpo no crecerá más allá de su contenido */
+}
+/* En el archivo estilo.css */
+.card-azul {
+    border: 2px solid #007bff; /* Borde azul */
+}
+
+
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+
+
+        <div class="container">
+<!-- Logo de la institución -->
+<a class="navbar-brand" href="#">
+    <img src="img/logo.jpg.png" alt="Logo de la Institución" class="logo">
+</a>
+<!-- Textos en movimiento después del logo -->
+<a class="nav-link moving-text" href="#" id="noticiasDropdown">
+    <img src="img/texto.PNG" alt="">
+    <span id="changingText">Novedades: Matricúlate ahora</span>
+</a>
+<script>
+    const changingText = document.getElementById("changingText");
+    const texts = ["Novedades: ✨✨🎼𝗥𝗘𝗖𝗜𝗧𝗔𝗟 𝗗𝗘 𝗠Ú𝗦𝗜𝗖𝗔 / Lunes  02 de octubre", "Novedades: Inicia el año 2024 con los mejores", "Novedades: Que esperas¡Matriculate ahora!"];
+    let index = 0;
+
+    function changeText() {
+        changingText.textContent = texts[index];
+        index = (index + 1) % texts.length;
+    }
+
+    setInterval(changeText, 5000); // Cambia el texto cada 2 segundos
+</script>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Nosotros
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="mision.html">Mision-Vision</a>
+                            <a class="dropdown-item" href="Bienvenida.html">Bienvenida del director</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Niveles de Educación
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="inicial.html">Inicial</a>
+                            <a class="dropdown-item" href="primaria.html">Primaria</a>
+                            <a class="dropdown-item" href="secundaria.html">Secundaria</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="noticiasDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Noticias
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="noticiasDropdown">
+                            <a class="dropdown-item" href="logros.html">Logros</a>
+                            <a class="dropdown-item" href="actividades.html">Actividades</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="noticiasDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Comunidad
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="noticiasDropdown">
+                            <a class="dropdown-item" href="directivos.html">Consejo de directivos</a>
+                            <a class="dropdown-item" href="docentes.html">Plana de docentes</a>
+                            <a class="dropdown-item" href="administrativo.html">Equipo administrativo</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="noticiasDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Admision
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="noticiasDropdown">
+                            <a class="dropdown-item" href="admision2024.html">Admision 2024</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        
+        <!-- Iconos en el lado derecho -->
+        <div class="navbar-icons ml-auto">
+            <a class="navbar-icon" href="https://www.facebook.com/I.E.P.ISAAC.NEWTON?mibextid=ZbWKwL">
+                <i class="fab fa-facebook fa-2x"></i>
+            </a>
+            <a class="navbar-icon" href="https://wa.me/51905468247" target="_blank">
+                <i class="fab fa-whatsapp fa-2x"></i>
+            </a>
+            <a class="navbar-icon" href="https://www.youtube.com/@institucioneducativaisaacn7723">
+                <i class="fab fa-youtube fa-2x"></i>
+            </a>
+        </div>
+    </nav>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="whatsapp-button">
+        <a href="https://wa.me/51905468247" target="_blank">
+            <img src="img/whatsap.png" alt="WhatsApp" class="whatsapp-icon">
+        </a>
+    </div> 
+
+    <!-- Información adicional antes del pie de página -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h3 class="text-center">Filtrar Actividaes por Mes</h3>
+                <br>
+                <button onclick="filtrarPorMes(0)">Mostrar Todas</button>
+                <button onclick="filtrarPorMes(1)">Enero</button>
+                <button onclick="filtrarPorMes(2)">Febrero</button>
+                <button onclick="filtrarPorMes(3)">Marzo</button>
+                <button onclick="filtrarPorMes(4)">Abril</button>
+                <button onclick="filtrarPorMes(5)">Mayo</button>
+                <button onclick="filtrarPorMes(6)">Junio</button>
+                <button onclick="filtrarPorMes(7)">Julio</button>
+                <button onclick="filtrarPorMes(8)">Agosto</button>
+                <button onclick="filtrarPorMes(9)">Setiembre</button>
+                <button onclick="filtrarPorMes(10)">Octubre</button>
+                <button onclick="filtrarPorMes(11)">Noviembre</button>
+                <button onclick="filtrarPorMes(12)">Diciembre</button>
+            </div>
+        </div>
+    </div>
+    <div class="container mt-4">
+        <div class="row" id="publicaciones">
+            <!-- Aquí se mostrarán las publicaciones filtradas -->
+        </div>
+    </div>
+    <!-- JavaScript para filtrar las publicaciones -->
+    <script>
+        window.onload = function () {
+            filtrarPorMes(0); // Muestra todas las publicaciones al cargar la página
+        }
+        // Supongamos que tienes un array de objetos con las publicaciones y cada objeto tiene una propiedad "fecha".
+        const publicaciones = [
+        { 
+    
+            titulo: "𝗖𝗔𝗠𝗣𝗘𝗢𝗡𝗔𝗧𝗢 𝗗𝗘 𝗩Ó𝗟𝗘𝗬 ",
+            fecha: "2023-10-03",
+            texto: "✨✨✨⭐️🌈La Institución Educativa Privada Isaac Newton felicita a los estudiantes del nivel primaria por su participación activa en el campeonato como parte de nuestras actividades por nuestro aniversario✨✨✨⭐️🌈☀️☀️Asimismo, nos sentimos argullosos por el gran trabajo que vienen realizando los maestros y maestras de nuestra institución.🥳🥳",
+            imagen: "img/actividades/octubre/1.jpg"
+        },
+        { 
+            titulo: "𝗦𝗔𝗖𝗥𝗔𝗠𝗘𝗡𝗧𝗢 𝗗𝗘 𝗟𝗔 𝗖𝗢𝗡𝗙𝗜𝗥𝗠𝗔𝗖𝗜Ó𝗡",
+            fecha: "2023-10-2",
+            texto: "✨🌟Con alegría compartimos las imágenes de la celebración del sacramento de la Confirmación de nuestros estudiantes newtonianos, evento que se llevó a cabo en el SANTUARIO DE MARÍA CAUSA DE NUESTRA ALEGRÍA – LAS PAMPAS; celebrado por el vicario general de la Diócesis. Pbro. Oswaldo Rodríguez Martínez.✨🌟.",
+            imagen: "img/actividades/octubre/2.jpg"
+        },
+        { 
+            titulo: "𝗠𝗨𝗘𝗦𝗧𝗥𝗔 𝗗𝗘 𝗔𝗥𝗧𝗘𝗦 𝗣𝗟Á𝗦𝗧𝗜𝗖𝗔𝗦",
+            fecha: "2023-09-30",
+            texto: "🎨🎨⭐️✨Este 𝙢𝙖𝙧𝙩𝙚𝙨 03 𝙤𝙘𝙩𝙪𝙗𝙧𝙚 continuamos con nuestras actividades por los 19 años de Creación Institucional.✨✨La comunidad newtoniana invita a participar de la 𝙈𝙪𝙚𝙨𝙩𝙧𝙖 𝙙𝙚 𝘼𝙧𝙩𝙚𝙨 𝙋𝙡á𝙨𝙩𝙞𝙘𝙖𝙨 🎨🎨 desde las 10:00 a.m. en nuestra institución.!!!! Los esperamos !!!!😄✨✨🎨🎨",
+            imagen: "img/actividades/octubre/3.jpg"
+        },
+
+        { 
+            titulo: "🎼𝗥𝗘𝗖𝗜𝗧𝗔𝗟 𝗗𝗘 𝗠Ú𝗦𝗜𝗖𝗔",
+            fecha: "2023-09-29",
+            texto: "✨🎼✨🎼Este Lunes 02 de octubre iniciamos con nuestras actividades por los 19 años de Creación Institucional.🎤🎼🎼🎤🎼👩‍🎤🧑‍🎤✨✨La familia newtoniana invita a participar del 𝗥𝗲𝗰𝗶𝘁𝗮𝗹 𝗱𝗲 𝗠ú𝘀𝗶𝗰𝗮 desde las 5:00 p.m. en nuestra institución.!!!! Los esperamos !!!!😄✨✨",
+            imagen: "img/actividades/octubre/4.jpg"
+        },
+
+        { 
+            titulo: "🔰𝗜𝗡𝗩𝗜𝗧𝗔𝗖𝗜Ó𝗡🔰🌟🎉𝙈𝙐𝙀𝙎𝙏𝙍𝘼 𝘿𝙀 𝙏𝙀𝘼𝙏𝙍𝙊",
+            fecha: "2023-09-28",
+            texto: "🌟✨🌟La Institución Educativa Privada Isaac Newton tiene el honor de invitar a toda la familia newtoniana y al público en general a la 𝙂𝙍𝘼𝙉 𝙈𝙐𝙀𝙎𝙏𝙍𝘼 𝘿𝙀 𝙏𝙀𝘼𝙏𝙍𝙊.🌟✨🌟𝘿í𝙖: Lunes 25 de setiembre de 2023 𝙃𝙤𝙧𝙖: 7:00 p.m.𝙇𝙪𝙜𝙖𝙧: I.E.P. Isaac Newton.",
+            imagen: "img/actividades/octubre/5.jpg"
+        },
+
+        { 
+            titulo: "🌟𝗖𝗢𝗡 É𝗫𝗜𝗧𝗢 𝗦𝗘 𝗥𝗘𝗔𝗟𝗜𝗭Ó 𝗘𝗟 “𝗖𝗔𝗠𝗣𝗘𝗢𝗡𝗔𝗧𝗢 𝗜𝗡𝗧𝗘𝗥𝗦𝗘𝗖𝗖𝗜𝗢𝗡𝗘𝗦”✨",
+            fecha: "2023-09-28",
+            texto: "✨🌟🔰Con motivo de celebrarse el Día Internacional de la Juventud, la Institución Educativa Privada Isaac Newton realizó el “Campeonato Intersecciones” con las disciplinas de voleibol y futsal, donde participaron los estudiantes del nivel secundaria.✨🌟",
+            imagen: "img/actividades/octubre/6.jpg"
+        },
+
+      
+        ];
+
+       // Función para mostrar las publicaciones según el mes seleccionado
+    function filtrarPorMes(mes) {
+        let publicacionesFiltradas;
+
+        if (mes === 0) {
+            // Mostrar todas las publicaciones
+            publicacionesFiltradas = publicaciones;
+        } else {
+            // Filtrar por mes
+            publicacionesFiltradas = publicaciones.filter(publicacion => {
+                const fecha = new Date(publicacion.fecha);
+                return fecha.getMonth() + 1 === mes; // +1 porque getMonth() devuelve valores de 0 a 11
+            });
+        }
+
+        // Mostrar las publicaciones filtradas en el contenedor
+        const publicacionesContainer = document.getElementById("publicaciones");
+        publicacionesContainer.innerHTML = ""; // Limpiar el contenedor
+
+publicacionesFiltradas.forEach(publicacion => {
+    const publicacionElement = document.createElement("div");
+    publicacionElement.classList.add("col-md-4");
+
+    // Agrega la clase para el color azul
+    publicacionElement.classList.add("card-azul");
+
+    publicacionElement.innerHTML = `
+    <div class="card mb-4 card-azul">
+            <img src="${publicacion.imagen}" class="card-img-top" alt="${publicacion.titulo}">
+            <div class="card-body">
+                <h5 class="card-title">${publicacion.titulo}</h5>
+                <p class="card-text">${publicacion.texto}</p>
+                <p class="card-text">Fecha de publicación: ${publicacion.fecha}</p>
+            </div>
+        </div>
+    `;
+    publicacionesContainer.appendChild(publicacionElement);
+});
+
+        
+    }
+</script>
+<br>
+<br>
+    <!-- Información adicional antes del pie de página -->
+    <div class="blue-rectangle">
+        <div class="container mt-4">
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>Contacto</h3>
+                    <p>
+                        Teléfono: 905468247<br>
+                        Email: iep.isaacnewtonhuanuco@gmail.com<br>
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <h3>Dirección</h3>
+                    <p>
+                        Jirón 2 de Mayo 1450, Huánuco 1000<br>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</main>
+    <footer class="bg-dark text-white text-center py-3">
+        <p class="text-light">&copy; 2023  EDWARD JR- Todos los derechos reservados. </p>
+    </footer>
+    
+</body>
+</html>

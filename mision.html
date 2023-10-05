@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISAAC NEWTON</title>
+    <link rel="icon" href="img/logo.jpg.png" type="image/png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+
+
+        <div class="container">
+<!-- Logo de la institución -->
+<a class="navbar-brand" href="#">
+    <img src="img/logo.jpg.png" alt="Logo de la Institución" class="logo">
+</a>
+<!-- Textos en movimiento después del logo -->
+<a class="nav-link moving-text" href="#" id="noticiasDropdown">
+    <img src="img/texto.PNG" alt="">
+    <span id="changingText">Novedades: Matricúlate ahora</span>
+</a>
+<script>
+    const changingText = document.getElementById("changingText");
+    const texts = ["Novedades: ✨✨🎼𝗥𝗘𝗖𝗜𝗧𝗔𝗟 𝗗𝗘 𝗠Ú𝗦𝗜𝗖𝗔 / Lunes  02 de octubre", "Novedades: Inicia el año 2024 con los mejores", "Novedades: Que esperas¡Matriculate ahora!"];
+    let index = 0;
+
+    function changeText() {
+        changingText.textContent = texts[index];
+        index = (index + 1) % texts.length;
+    }
+
+    setInterval(changeText, 5000); // Cambia el texto cada 2 segundos
+</script>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Nosotros
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="mision.html">Mision-Vision</a>
+                            <a class="dropdown-item" href="bienvenida.html">Bienvenida del director</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Niveles de Educación
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="inicial.html">Inicial</a>
+                            <a class="dropdown-item" href="primaria.html">Primaria</a>
+                            <a class="dropdown-item" href="secundaria.html">Secundaria</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="noticiasDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Noticias
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="noticiasDropdown">
+                            <a class="dropdown-item" href="logros.html">Logros</a>
+                            <a class="dropdown-item" href="actividades.html">Actividades</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="noticiasDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Comunidad
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="noticiasDropdown">
+                            <a class="dropdown-item" href="directivos.html">Consejo de directivos</a>
+                            <a class="dropdown-item" href="docentes.html">Plana de docentes</a>
+                            <a class="dropdown-item" href="administrativo.html">Equipo administrativo</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="noticiasDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Admision
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="noticiasDropdown">
+                            <a class="dropdown-item" href="admision2024.html">Admision 2024</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- Iconos en el lado derecho -->
+        <div class="navbar-icons ml-auto">
+            <a class="navbar-icon" href="https://www.facebook.com/I.E.P.ISAAC.NEWTON?mibextid=ZbWKwL">
+                <i class="fab fa-facebook fa-2x"></i>
+            </a>
+            <a class="navbar-icon" href="https://wa.me/51905468247" target="_blank">
+                <i class="fab fa-whatsapp fa-2x"></i>
+            </a>
+            <a class="navbar-icon" href="https://www.youtube.com/@institucioneducativaisaacn7723">
+                <i class="fab fa-youtube fa-2x"></i>
+            </a>
+        </div>
+    </nav>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <main class="container mt-4">
+        <main class="container bg-light p-4 animate-slide-up"> <!-- Agregar la clase animate-slide-up -->
+          <div class="row">
+            <div class="col-md-3">
+              <img src="img/mision.JPG" alt="Imagen de la Misión" class="img-fluid">
+            </div>
+            <div class="col-md-9">
+              <h2>Misión</h2>
+              <p>En la Institución Educativa Escuela Isaac Newton, nuestra misión es proporcionar una educación integral y de alta calidad que empodere a nuestros estudiantes. Nos comprometemos a fortalecer su autoestima, desarrollar sus habilidades sociales y ofrecer una educación sólida en todos los aspectos: académico, moral y emocional. Nuestra meta es preparar a los estudiantes para alcanzar el éxito personal y profesional en una sociedad en constante cambio.</p>
+            </div>
+          </div>
+        </main>
+        <br>
+    
+        <main class="container bg-light p-4 animate-slide-up"> <!-- Agregar la clase animate-slide-up -->
+          <div class="row">
+            <div class="col-md-3">
+              <img src="img/vision.JPG" alt="Imagen de la Visión" class="img-fluid">
+            </div>
+            <div class="col-md-9">
+              <h2>Visión</h2>
+              <p>Nuestra visión en la Institución Educativa Escuela Isaac Newton es ser reconocidos como líderes en la educación integral de nuestros estudiantes. Buscamos crear un ambiente donde los alumnos experimenten un crecimiento integral: espiritual, físico, social, intelectual, moral y emocional. Nos esforzamos por brindar una educación que permita a cada estudiante alcanzar su máximo potencial y convertirse en ciudadanos responsables y exitosos en una sociedad globalizada.</p>
+            </div>
+          </div>
+        </main>
+        <br>
+    
+        <main class="container bg-light p-4 animate-slide-up"> <!-- Agregar la clase animate-slide-up -->
+          <!-- Video de Facebook con descripción -->
+          <div class="video-container text-center">
+            <iframe src="vd/VIDEO INSTITUC (1).mp4" width="560" height="315" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
+            <h6>Video Institucional: Misión, Visión y Historia de la Institución</h6>
+          </div>
+        </main>
+      </main>
+        <script>
+            window.addEventListener('load', function() {
+              // Agrega la clase 'show' para activar la animación
+              document.querySelectorAll('.animate-slide-up').forEach(function(element) {
+                element.classList.add('show');
+              });
+            });
+          </script>
+        <style>
+            /* Estilo para dispositivos móviles */
+            @media (max-width: 768px) {
+                .video-container iframe {
+                    width: 100%; /* Cambia el ancho al 100% */
+                    height: auto; /* Ajusta la altura automáticamente */
+                }
+            }
+             /* Estilo para los elementos que deseas animar */
+  .animate-slide-up {
+    opacity: 0; /* Comienza con una opacidad de 0 (invisible) */
+    transform: translateY(20px); /* Desplazamiento hacia abajo (ajusta según sea necesario) */
+    transition: opacity 1s, transform 1s; /* Duración de la animación */
+  }
+
+  /* Estilo para animar cuando se activa la clase 'show' */
+  .animate-slide-up.show {
+    opacity: 1; /* Opacidad completa (visible) */
+    transform: translateY(0); /* Sin desplazamiento vertical */
+  }
+        </style>
+        
+        <main class="container bg-light p-4"> 
+            <!-- Contenedor de la imagen circular y el texto -->
+            <div class="row row-container">
+                <div class="col-md-8">
+                    <!-- Contenedor del texto -->
+                    <div class="contenido-container">
+                        <h2>¿Por qué elegirnos?</h2>
+                        <p>
+                            Porque no solo debemos buscar una excelente institución académica, sino que debemos tener en cuenta la relación entre los alumnos y el colegio, ya que esta influirá en la personalidad de nuestros hijos.
+                            Porque nuestros docentes son profesionales, capacitados, con alto nivel de formación académica y moral.
+                            Por la formación integral de nuestros estudiantes que nos compromete en el desarrollo de una sociedad más humana, dando énfasis al desarrollo de sus virtudes.
+                            Por nuestros recursos educativos, contamos con una adecuada infraestructura equipada con recursos didácticos modernos y a la vanguardia de la tecnología. Somos la mejor elección para la educación en la Institución Isaac Newton de Huanuco.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <!-- Contenedor de la imagen circular -->
+                    <div class="imagen-container">
+                        <img src="img/porque.png" alt="Imagen de Ejemplo" class="img-fluid imagen-circular">
+                    </div>
+                </div>
+            </div>
+        </main>        
+    </main>        
+    <!-- Información adicional antes del pie de página -->
+    <div class="blue-rectangle">
+        <div class="container mt-4">
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>Contacto</h3>
+                    <p>
+                        Teléfono: 905468247<br>
+                        Email: iep.isaacnewtonhuanuco@gmail.com<br>
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <h3>Dirección</h3>
+                    <p>
+                        Jirón 2 de Mayo 1450, Huánuco 1000<br>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</main>
+<footer class="bg-dark text-white text-center py-3">
+    <p class="text-light">&copy; 2023  EDWARD JR- Todos los derechos reservados. </p>
+</footer>
+    
+</body>
+</html>

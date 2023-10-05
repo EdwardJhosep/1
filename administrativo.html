@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Institución Educativa ISAAC NEWTON</title>
+    <link rel="icon" href="img/logo.jpg.png" type="image/png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="estilo.css">
+    <style>
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+
+
+        <div class="container">
+<!-- Logo de la institución -->
+<a class="navbar-brand" href="#">
+    <img src="img/logo.jpg.png" alt="Logo de la Institución" class="logo">
+</a>
+<!-- Textos en movimiento después del logo -->
+<a class="nav-link moving-text" href="#" id="noticiasDropdown">
+    <img src="img/texto.PNG" alt="">
+    <span id="changingText">Novedades: Matricúlate ahora</span>
+</a>
+<script>
+    const changingText = document.getElementById("changingText");
+    const texts = ["Novedades: ✨✨🎼𝗥𝗘𝗖𝗜𝗧𝗔𝗟 𝗗𝗘 𝗠Ú𝗦𝗜𝗖𝗔 / Lunes  02 de octubre", "Novedades: Inicia el año 2024 con los mejores", "Novedades: Que esperas¡Matriculate ahora!"];
+    let index = 0;
+
+    function changeText() {
+        changingText.textContent = texts[index];
+        index = (index + 1) % texts.length;
+    }
+
+    setInterval(changeText, 5000); // Cambia el texto cada 2 segundos
+</script>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Nosotros
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="mision.html">Mision-Vision</a>
+                            <a class="dropdown-item" href="Bienvenida.html">Bienvenida del director</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Niveles de Educación
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="inicial.html">Inicial</a>
+                            <a class="dropdown-item" href="primaria.html">Primaria</a>
+                            <a class="dropdown-item" href="secundaria.html">Secundaria</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="noticiasDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Noticias
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="noticiasDropdown">
+                            <a class="dropdown-item" href="logros.html">Logros</a>
+                            <a class="dropdown-item" href="actividades.html">Actividades</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="noticiasDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Comunidad
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="noticiasDropdown">
+                            <a class="dropdown-item" href="directivos.html">Consejo de directivos</a>
+                            <a class="dropdown-item" href="docentes.html">Plana de docentes</a>
+                            <a class="dropdown-item" href="administrativo.html">Equipo administrativo</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="noticiasDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Admision
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="noticiasDropdown">
+                            <a class="dropdown-item" href="admision2024.html">Admision 2024</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        
+        <!-- Iconos en el lado derecho -->
+        <div class="navbar-icons ml-auto">
+            <a class="navbar-icon" href="https://www.facebook.com/I.E.P.ISAAC.NEWTON?mibextid=ZbWKwL">
+                <i class="fab fa-facebook fa-2x"></i>
+            </a>
+            <a class="navbar-icon" href="https://wa.me/51905468247" target="_blank">
+                <i class="fab fa-whatsapp fa-2x"></i>
+            </a>
+            <a class="navbar-icon" href="https://www.youtube.com/@institucioneducativaisaacn7723">
+                <i class="fab fa-youtube fa-2x"></i>
+            </a>
+        </div>
+    </nav>
+    <div class="whatsapp-button">
+        <a href="https://wa.me/51905468247" target="_blank">
+            <img src="img/whatsap.png" alt="WhatsApp" class="whatsapp-icon">
+        </a>
+    </div> 
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+<!-- Cuadro de texto con color azul y ancho limitado -->
+<main class="container bg-light p-4"> 
+    <!-- Contenedor de la imagen circular y el texto -->
+    <div class="row row-container">
+        <div class="col-md-8">
+            <!-- Contenedor del texto -->
+            <div class="contenido-container">
+                <h3>Administrativos Capaces</h3>
+                <p>Nuestro equipo de administrativos altamente capacitados se dedica a brindar el mejor servicio y apoyo a nuestra comunidad educativa. Su compromiso y experiencia son fundamentales para el funcionamiento eficiente de nuestra institución.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <!-- Contenedor de la imagen circular -->
+            <div class="imagen-container">
+                <img src="img/administrativos/1.JPG" alt="Imagen de Ejemplo" class="img-fluid imagen-circular">
+            </div>
+        </div>
+    </div>
+</main>
+<!-- Información sobre administrativos en cuadros centrados -->
+<div class="container mt-4 text-center">
+    <h2>Administrativos</h2>
+    <br>
+    <div class="row">
+        <div class="col-md-4 mx-auto">
+            <div class="card">
+                <img src="img/secretaria/rosa_tapia_fernandez.jpg" alt="Rosa Tapia Fernandez" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Rosa Tapia Fernandez</h5>
+                    <p>Cargo: Secretaria General</p>
+                    <p>Grado Académico: Administración</p>
+                </div>
+                <!-- Agrega efectos de sombra y transición al pasar el mouse -->
+                <style>
+                    .card {
+                        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+                        transition: 0.3s;
+                    }
+
+                    .card:hover {
+                        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+                    }
+                </style>
+            </div>
+        </div>
+        <div class="col-md-4 mx-auto">
+            <div class="card">
+                <img src="img/administrativos/administrativo2.png" alt="Administrativo 2" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Erika Natalia Ponce Flores</h5>
+                    <p>Cargo: Encargada del área de Imagen</p>
+                    <p>Grado Académico: Ciencias de Comunicación Social</p>
+                </div>
+                <!-- Agrega efectos de sombra y transición al pasar el mouse -->
+                <style>
+                    .card {
+                        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+                        transition: 0.3s;
+                    }
+
+                    .card:hover {
+                        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+                    }
+                </style>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+<br>
+
+    <!-- Información adicional antes del pie de página -->
+    <div class="blue-rectangle">
+        <div class="container mt-4">
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>Contacto</h3>
+                    <p>
+                        Teléfono: 905468247<br>
+                        Email: iep.isaacnewtonhuanuco@gmail.com<br>
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <h3>Dirección</h3>
+                    <p>
+                        Jirón 2 de Mayo 1450, Huánuco 1000<br>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</main>
+    <footer class="bg-dark text-white text-center py-3">
+        <p class="text-light">&copy; 2023  EDWARD JR- Todos los derechos reservados. </p>
+    </footer>
+    
+</body>
+</html>
